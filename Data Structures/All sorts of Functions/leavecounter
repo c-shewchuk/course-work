@@ -1,0 +1,41 @@
+//Function to count the number of leaves in the tree
+
+int countleaves(Node* root){
+  if(!root)
+  return 0;
+
+  int count = 0;
+  count = countleaves(root->leftChild); //Stops here and goes to the call of the function at the top from the leftChild
+  count = countleaves(root->rightChild);// after performing step 8 and returning the increase in the sum, does the right child
+  if(root->rightChild == NULL && root->leftChild ==  NULL){ // the check if the Function should continue
+    count++;
+
+  }
+  return count;
+}
+
+
+//another leaf count
+int countleave(Node* root){
+  if(root == NULL)
+  return 0;
+
+  if(root->leftChild == NULL && root->rightChild == NULL)
+  return 1;
+
+  else
+  return countleave(root->leftChild) + countleave(root->rightChild);
+}
+
+void reverseString(char a[],int start, int last){
+  if(start < last){
+  char temp = a[start];
+  a[start] = a[end];
+  a[end] = temp;
+
+  start++;
+  last--;
+  reverseString(a, start, last);
+  }
+  
+}

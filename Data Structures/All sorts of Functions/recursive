@@ -1,0 +1,10 @@
+int recursive(int N, int M){
+
+  if(M == 0)
+  return N+1;
+
+  if(N == 0)
+  return recursive(M-1, 1);
+
+  return recursive(M, N-1);
+}

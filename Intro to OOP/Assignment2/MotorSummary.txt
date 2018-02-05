@@ -1,0 +1,33 @@
+Motor Use Summary
+
+Motor 1
+3.048 amps, running from 200s to 259s (59 seconds).
+7.231 amps, running from 610s to 639s (29 seconds).
+2.234 amps, running from 950s to 959s (9 seconds).
+
+Motor 2
+4.090 amps, running from 100s to 139s (39 seconds).
+7.254 amps, running from 210s to 239s (29 seconds).
+4.437 amps, running from 950s to 959s (9 seconds).
+
+Motor 3
+7.234 amps, running from 310s to 339s (29 seconds).
+4.433 amps, running from 550s to 559s (9 seconds).
+
+Motor 4
+* Motor did not run *
+
+Motor 5
+7.248 amps, running from 210s to 239s (29 seconds).
+4.468 amps, running from 950s to 959s (9 seconds).
+
+Motor 6
+*** MAX CURRENT EXCEEDED ***
+ 9.082 amps, running from 250s to 359s (109 seconds).
+4.042 amps, running from 650s to 759s (109 seconds).
+
+Motor 7
+4.093 amps, running from 100s to 139s (39 seconds).
+*** MAX CURRENT EXCEEDED ***
+ 9.306 amps, running from 210s to 239s (29 seconds).
+4.428 amps, running from 950s to 959s (9 seconds).

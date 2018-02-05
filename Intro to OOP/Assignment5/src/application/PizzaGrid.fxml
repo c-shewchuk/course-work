@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<GridPane prefHeight="635.0" prefWidth="636.0" style="-fx-background-color: blanchedalmond;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <columnConstraints>
+      <ColumnConstraints maxWidth="200.0" minWidth="150.0" prefWidth="150.0" />
+      <ColumnConstraints maxWidth="97.0" minWidth="0.0" prefWidth="1.0" />
+      <ColumnConstraints maxWidth="1.7976931348623157E308" minWidth="270.0" prefWidth="373.0" />
+      <ColumnConstraints maxWidth="200.0" minWidth="34.0" prefWidth="113.0" />
+      <ColumnConstraints maxWidth="68.0" minWidth="0.0" prefWidth="0.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="171.0" minHeight="98.0" prefHeight="99.0" />
+      <RowConstraints maxHeight="119.0" minHeight="5.0" prefHeight="47.0" />
+      <RowConstraints maxHeight="115.0" minHeight="28.0" prefHeight="78.0" />
+      <RowConstraints maxHeight="196.0" minHeight="10.0" prefHeight="47.0" />
+      <RowConstraints maxHeight="85.0" minHeight="22.0" prefHeight="46.0" />
+      <RowConstraints maxHeight="94.0" minHeight="31.0" prefHeight="43.0" />
+      <RowConstraints maxHeight="94.0" minHeight="31.0" prefHeight="85.0" />
+      <RowConstraints maxHeight="94.0" minHeight="31.0" prefHeight="85.0" />
+      <RowConstraints maxHeight="94.0" minHeight="31.0" prefHeight="85.0" />
+   </rowConstraints>
+   <children>
+      <Label id="size" prefHeight="24.0" prefWidth="125.0" text="Pizza Size" textAlignment="CENTER" textOverrun="CLIP" wrapText="true" GridPane.rowIndex="2" GridPane.rowSpan="2">
+         <padding>
+            <Insets bottom="45.0" left="10.0" />
+         </padding>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ed1313" />
+                  <Stop color="#220101" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label id="cheese" text="Cheese" GridPane.rowIndex="3">
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+         <font>
+            <Font size="21.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ed1313" />
+                  <Stop color="#220101" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label id="ham" text="Ham" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="21.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ed1313" />
+                  <Stop color="#220101" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <ChoiceBox fx:id="dropDownC" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <Label id="pepper" text="Pepperoni" GridPane.rowIndex="5">
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+         <font>
+            <Font size="21.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ed1313" />
+                  <Stop color="#220101" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <ChoiceBox fx:id="dropDownSize" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Label id="pizzaNum" prefHeight="56.0" prefWidth="129.0" text="Number of Pizzas" wrapText="true" GridPane.rowIndex="6">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ed1313" />
+                  <Stop color="#220101" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <TextField fx:id="numPizza" alignment="CENTER" promptText="Can order 1-100 Pizza's!" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+      <Label text="Choose Your Toppings!" wrapText="true" GridPane.columnIndex="2">
+         <font>
+            <Font size="23.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ed1313" />
+                  <Stop color="#220101" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Label text="Maximum of Three Meats!" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ed1313" />
+                  <Stop color="#220101" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Label text="Curtis' Pizza Maker!" textAlignment="CENTER" wrapText="true">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ed1313" />
+                  <Stop color="#220101" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label text="Cost per Pizza" wrapText="true" GridPane.rowIndex="7">
+         <font>
+            <Font size="26.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ed1313" />
+                  <Stop color="#220101" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <TextField fx:id="costPer" alignment="CENTER" editable="false" prefHeight="35.0" prefWidth="146.0" promptText="Cost per Pizza " GridPane.rowIndex="8" />
+      <Label alignment="CENTER" contentDisplay="CENTER" text="Cost of Order" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="7">
+         <font>
+            <Font size="26.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ed1313" />
+                  <Stop color="#220101" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+      <TextField fx:id="totalCost" alignment="CENTER" editable="false" promptText="Total Cost" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+      <Button fx:id="saveOrder" alignment="CENTER_RIGHT" mnemonicParsing="false" prefHeight="56.0" prefWidth="266.0" text="Confirm Order" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="7">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="RED" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="32.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="50.0" />
+         </GridPane.margin>
+      </Button>
+      <TextField fx:id="finalOrder" alignment="CENTER" editable="false" prefHeight="48.0" prefWidth="266.0" promptText="Pizza Order Will Be Shown Here" GridPane.columnIndex="2" GridPane.rowIndex="8">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <GridPane GridPane.columnIndex="2" GridPane.rowIndex="4">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <RadioButton fx:id="pepperoniNone" mnemonicParsing="false" selected="true" text="None">
+               <toggleGroup>
+                  <ToggleGroup fx:id="Ham" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="hamSingle" mnemonicParsing="false" text="Single" toggleGroup="$Ham" GridPane.columnIndex="1" />
+            <RadioButton fx:id="hamDouble" mnemonicParsing="false" text="Double" toggleGroup="$Ham" GridPane.columnIndex="2" />
+            <RadioButton fx:id="hamTriple" mnemonicParsing="false" text="Triple" toggleGroup="$Ham" GridPane.columnIndex="3" />
+         </children>
+      </GridPane>
+      <GridPane GridPane.columnIndex="2" GridPane.rowIndex="5">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <RadioButton fx:id="pepperoniNone" mnemonicParsing="false" selected="true" text="None">
+               <toggleGroup>
+                  <ToggleGroup fx:id="Pepperoni" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="pepperoniSingle" mnemonicParsing="false" text="Single" toggleGroup="$Pepperoni" GridPane.columnIndex="1" />
+            <RadioButton fx:id="pepperoniDouble" mnemonicParsing="false" text="Double" toggleGroup="$Pepperoni" GridPane.columnIndex="2" />
+            <RadioButton fx:id="pepperoniTriple" mnemonicParsing="false" text="Triple" toggleGroup="$Pepperoni" GridPane.columnIndex="3" />
+         </children>
+      </GridPane>
+   </children>
+</GridPane>

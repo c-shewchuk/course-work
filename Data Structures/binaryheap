@@ -1,0 +1,82 @@
+//Impletmentation of Binary Heap
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct Heap{
+  int *a;
+  int last;
+  int maxSize;
+}Heap;
+
+Heap* initHeap(int size){
+  Heap* h = malloc(sizeof(Heap));
+  h->a = malloc(sizeof(int)*size);
+  h->last  = -1; //Negative 1 tells you that the heap is empty
+  h->maxSize = size;
+  return h;
+}
+
+void heapInsert(Heap* heap, int x){
+  if(heap->last == maxSize-1)
+  return; //quick check to see if the heap is at maxSize
+  heap->a[++heap->last] = x;
+  reHeapUp(heap, heap->last); //fix the heap if needed
+}
+
+void reHeapUp(Heap* heap, int index){
+  if(index <= 0) //check if the value is the first one being inserted into the heap
+  return;
+  int parent = (index-1)/2; //find the parent index
+  //now check if the value at the index is less then the prior value
+  if(heap->a[index] < heap->a[parent])
+  swap(heap->a, index, parent);
+  else
+  return;
+  reHeapUp(heap, heap->last);
+}
+
+void swap(int* a, int index, int parent){
+  int temp = parent;
+  a[parent] = a[index];
+  a[index] = a[temp];
+}
+
+void withDrawMin(Heap* heap){
+  int min = h->a[0];
+  h->a[0] = h->a[h->last];
+  h->last--;
+  reHeapDown(h,0);
+
+}
+
+void reHeapDown(Heap* heap, int i){
+  int left;
+  int right;
+  int smallest;
+  int smallestindex;
+   if(2*i +1 <= heap->last){
+     left = heap->a[2*i +1]; // assign the leftchild to the left int
+     if(2*i + 2 <= heap->last){
+       right = heap->last;
+     }
+   }
+   else{
+   right = -1;
+    }
+   if(left < right || right = -1){
+     smallest = left;
+     smallestindex = 2*i + 1;
+   }
+   else{
+     smallest = right;
+     smallestindex = 2*i + 2;
+   }
+   if(heap->a[i] > smallest){
+     swap(heap->a, i, smallestindex);
+    reHeapDown(heap, smallestindex);
+   }
+}
+int main(){
+
+  return 0;
+}

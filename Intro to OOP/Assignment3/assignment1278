@@ -1,0 +1,29 @@
+//278
+
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct Polynomial{
+  node* firstElement;
+}Polynomial;
+
+
+typedef struct node{
+  double coeff;
+  int exp;
+  node* next;
+}node;
+
+int getDegree(){
+  int degree = 0;
+  degree = Polynomial->firstElement->exp;
+  return degree;
+}
+
+double getCoefficient(){
+
+}
+
+void setCoefficient(){
+
+}
