@@ -1,0 +1,12 @@
+Group 29 - Lab 4
+
+Documentation - 4/4
+Great report, well detailed.
+
+Testing - 4/4
+Great description of your testing procedure and inclusion of the appropriate outputs.
+
+Structure and Clarity - 1.5/2
+Great code structure, minor use of comments in some files.
+
+Total: 9.5/10

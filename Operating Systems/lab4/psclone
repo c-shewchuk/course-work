@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Print the formatted headers
+echo PID USER RSS COMMAND | awk '{printf "%4s\t%4s\t%3s\t%7s\n", $1, $2, $3, $4};'
+
+# Get all the relevant procfiles
+files=$(find /proc/ -type d -maxdepth 1 -regex "\/proc\/[0-9][0-9]*")
+for f in $files; do
+	if [ -d $f ]; then
+		pid=$(echo $f | tr -d "/proc/")
+		uid=$(stat $f | grep -o "Uid:.*G" | sed -e "s/Uid.*\/ *//g" -e "s/).*//g")
+		RSS=$(cat $f/status | grep -o "VmRSS:.*$" | sed -e "s/VmRSS:\s*//g" -e "s/kB//g")
+		cmdline=$(cat $f/cmdline | sed -e "s/\x0/ /g")
+		if [ -z $RSS ]; then
+			# If RSS is not visible, then set it to 0.
+			RSS=0
+		fi
+
+		if ((${#cmdline} == 0)); then
+			# If cmdline file is blank then check first line in status file.
+			cmdline=$(cat $f/status | sed -n 1p | sed -e "s/Name:\s*//g")
+		fi
+
+		# Print with proper left padding.
+		echo $pid $uid $RSS $cmdline | awk '{printf "%4s\t%4s\t%3s\t%s\n", $1, $2, $3, $4};'
+	fi
+done
+

@@ -1,0 +1,21 @@
+Lab5 Feedback
+
+
+Documentation				4/4
+The overall explanation of the problem and how you plan to solve it shows you know how the exploit works and
+how the values are set.
+
+
+Structure and Clarity of Approach 	1/2
+Your C byte array has no comments showing which assembly instruction it is executing, which makes the code
+unclear to read/debug. You should structure your array like "0x5E, // pop esi". Your nasm code also has no
+comments explaining its function. It should be divided into four main blocks of Restore null bytes, Store args
+pointers to array, Set up system call and data setup, with comments on what the asm commands do.
+
+
+Testing			4/4
+Your testing methodologies are thorough and you correctly prove your exploit works, demonstrating correct
+output.
+
+
+Total	9/10

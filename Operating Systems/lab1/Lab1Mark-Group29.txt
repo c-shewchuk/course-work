@@ -1,0 +1,13 @@
+Group 29 - Lab 1
+
+Documentation - 4/4
+Very well written report and explanation of the algorithm process.
+
+Testing - 3/4
+Sample output section of the report left empty, not output from your program or the ps -A command was included.
+
+Structure and Clarity - 2/2
+Very well structure C code.
+Well written comments throughout the program.
+
+Total: 9/10

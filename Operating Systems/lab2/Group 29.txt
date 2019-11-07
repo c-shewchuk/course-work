@@ -1,0 +1,23 @@
+Lab2 Feedback
+
+STUDENT#	Curtis Shewchuk 
+STUDENT#    Viraj Bangari 
+***Please include your student number so we ensure that your mark gets entered***
+
+Documentation                       4/4
+Your initial pseudo code algorithm is descriptive. The overall explanation of how the program works shows you have
+full understanding of how the code works.
+
+Structure and Clarity of Approach   1.5/2
+The code for my_read_proc() is efficient. Your code is well structured and formatted, but could benefit 
+from better commenting. More comments could be added on your major structure points such as if statement labels 
+and function definitions to explain how your code works.
+
+Testing and Correctness             2/4
+Your testing document does not have any output of your program so there is no proof that it does run properly.
+According to the lab documentation you were to in your report compare the output of your program to that of the ps 
+command to show it correctly reads all the running processes and does not just read random data. You must also 
+explain any difference between the output of your program and the ps command as they will not be identical.
+
+
+Total                                7.5/10

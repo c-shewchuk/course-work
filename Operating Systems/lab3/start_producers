@@ -1,0 +1,5 @@
+./meminit
+./producer 0 < proc0.txt &
+./producer 1 < proc1.txt &
+./producer 2 < proc2.txt &
+./producer 3 < proc3.txt &

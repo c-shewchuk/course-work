@@ -1,0 +1,47 @@
+#!/bin/bash
+
+if (($# == 0)); then
+        # Throw an error if no args are provided
+	echo "Usage: ./source_code [dirname]"
+	exit 1
+fi
+
+dirname=$1
+
+# Pattern for matching main
+main_pattern="int *main *(.*) *"
+module_pattern="int *init_module *(.*) *"
+
+# Strings that will hold matches
+main_matches=""
+module_matches=""
+other_matches=""
+
+# Loop through every .c file.
+for f in $(find $dirname -name '*.c'); do
+	if (($(grep -c "$main_pattern" $f) > 0)); then
+		num_printf=$(grep -c "[^f]printf" $f)
+		num_fprintf=$(grep -c "fprintf" $f)
+		main_matches="${main_matches} ${f}:${num_printf},${num_fprintf}"
+	elif (($(grep -c "$module_pattern" $f) > 0)); then
+		num_printf=$(grep -c "[^f]printf" $f)
+		num_fprintf=$(grep -c "fprintf" $f)
+		num_printk=$(grep -c "printk" $f)
+		module_matches="${module_matches} ${f}:${num_printf},${num_fprintf},${num_printk}"
+	else
+		other_matches="${other_matches} ${f}"
+	fi
+
+done
+
+# The strings are space separated. Convert spaces to newlines
+# for proper formatting.
+echo Main Files:
+echo $main_matches | tr " " "\n"
+
+echo Module Files:
+echo $module_matches | tr " " "\n"
+
+echo Other Files:
+echo $other_matches | tr " " "\n"
+

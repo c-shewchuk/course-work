@@ -1,0 +1,12 @@
+Group 29 - Lab 3
+
+Documentation - 4/4
+Great documentation and very well written description of the pass the key algorithm.
+
+Testing - 3/4
+Good testing report, missing the output piped to a text file.
+
+Structure and Clarity - 2/2
+Great comments and formatting.
+
+Total: 9/10
